@@ -36,7 +36,6 @@
     "organization": true
   },
   "devDependencies": {
-    "@types/fs-extra": "^9.0.13",
     "@types/jest": "^27",
     "@types/node": "^14",
     "@typescript-eslint/eslint-plugin": "^5",
@@ -66,6 +65,7 @@
     "projen": "^0.63.13"
   },
   "dependencies": {
+    "@types/fs-extra": "^9.0.13",
     "change-case": "^4.1.2",
     "fs-extra": "^10.1.0"
   },

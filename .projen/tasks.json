@@ -182,7 +182,7 @@
       "name": "postinstall",
       "steps": [
         {
-          "exec": "yarn install; tsc --outDir ./lib"
+          "exec": "tsc --outDir ./lib"
         }
       ]
     },

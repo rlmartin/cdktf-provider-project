@@ -7,8 +7,8 @@ const project = new cdk.JsiiProject({
   repository: "https://github.com/hashicorp/cdktf-provider-project.git",
   authorOrganization: true,
   peerDeps: ["projen@^0.63.13"],
-  deps: ["change-case", "fs-extra"],
-  devDeps: ["@types/fs-extra", "glob"],
+  deps: ["change-case", "fs-extra", "@types/fs-extra"],
+  devDeps: ["glob"],
   bundledDeps: ["change-case", "fs-extra"],
   license: "MPL-2.0",
   defaultReleaseBranch: "main",
@@ -18,7 +18,7 @@ const project = new cdk.JsiiProject({
   mergify: false,
   scripts: {
     "eslint:fix": "eslint . --ext .ts --fix",
-    "postinstall": "yarn install; tsc --outDir ./lib",
+    "postinstall": "tsc --outDir ./lib",
   },
   prettier: true,
 });

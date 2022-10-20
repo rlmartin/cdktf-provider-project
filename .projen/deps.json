@@ -1,10 +1,6 @@
 {
   "dependencies": [
     {
-      "name": "@types/fs-extra",
-      "type": "build"
-    },
-    {
       "name": "@types/jest",
       "version": "^27",
       "type": "build"
@@ -138,6 +134,10 @@
       "name": "projen",
       "version": "^0.63.13",
       "type": "peer"
+    },
+    {
+      "name": "@types/fs-extra",
+      "type": "runtime"
     },
     {
       "name": "change-case",
