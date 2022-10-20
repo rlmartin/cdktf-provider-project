@@ -18,6 +18,7 @@ const project = new cdk.JsiiProject({
   mergify: false,
   scripts: {
     "eslint:fix": "eslint . --ext .ts --fix",
+    "postinstall": "yarn install; tsc --outDir ./lib",
   },
   prettier: true,
 });

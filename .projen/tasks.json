@@ -178,6 +178,14 @@
       "name": "post-upgrade",
       "description": "Runs after upgrading dependencies"
     },
+    "postinstall": {
+      "name": "postinstall",
+      "steps": [
+        {
+          "exec": "yarn install; tsc --outDir ./lib"
+        }
+      ]
+    },
     "pre-compile": {
       "name": "pre-compile",
       "description": "Prepare the project for compilation"
