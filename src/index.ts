@@ -11,8 +11,6 @@ import { ProviderUpgrade } from "./provider-upgrade";
 import { CheckForUpgradesScriptFile } from "./scripts/check-for-upgrades";
 import { ShouldReleaseScriptFile } from "./scripts/should-release";
 
-const version = require("../version.json").version;
-
 export interface CdktfProviderProjectOptions extends cdk.JsiiProjectOptions {
   readonly useCustomGithubRunner?: boolean;
   readonly terraformProvider: string;
@@ -123,7 +121,7 @@ export class CdktfProviderProject extends cdk.JsiiProject {
       license: "MPL-2.0",
       releaseToNpm: true,
       minNodeVersion,
-      devDeps: [`@cdktf/provider-project@^${version}`, "dot-prop@^5.2.0"],
+      devDeps: ["dot-prop@^5.2.0", ...(options.devDeps ?? [])],
       name: packageInfo.npm.name,
       description: `Prebuilt ${providerName} Provider for Terraform CDK (cdktf)`,
       keywords: ["cdktf", "terraform", "cdk", "provider", providerName],
